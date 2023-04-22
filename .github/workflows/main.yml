@@ -4,7 +4,7 @@ on: push
 # Upload the artifact
 jobs:
   job_1:
-    name: Upload Artifact se
+    name: Upload Artifact 
     runs-on: ubuntu-latest
 
     environment:
@@ -27,6 +27,7 @@ jobs:
 
 # This job download the artifact needs the job_1 to run to start.
   job_2:
+    name: Download Artifact
     runs-on: ubuntu-latest
     needs: job_1
     steps: 
