@@ -6,9 +6,17 @@ jobs:
   job_1:
     name: Upload Artifacts
     runs-on: ubuntu-latest
+
+    environment:
+      name: Production
+      url: https://github.com
+        
+
+
     steps:
-       - name: "Create a local file"
-         run: echo "Hi, We are making this test for a demo" > file.txt
+       - name: 'Create a local file'
+         run: |
+             echo "APP_SECRET: ${{ secrets.APP_SECRET }}" > file.txt
 
 
        - uses: actions/upload-artifact@v2
