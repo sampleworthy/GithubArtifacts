@@ -4,7 +4,7 @@ on: push
 
 jobs:
   job_1:
-    name: Upload Artifacts
+    name: Upload Artifact se
     runs-on: ubuntu-latest
 
     environment:
@@ -12,7 +12,7 @@ jobs:
       url: https://github.com
         
 
-
+# Create local file for y
     steps:
        - name: 'Create a local file'
          run: |
@@ -25,9 +25,9 @@ jobs:
           path: file.txt
 
 
-
+# This job download the artifact
   job_2:
-    name: Download Artifact
+    name: Download Artifactr
     runs-on: ubuntu-latest
     needs: job_1
     steps: 
